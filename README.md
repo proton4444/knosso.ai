@@ -1,12 +1,10 @@
 # AI Services Platform
 
-A platform for accessing various AI services, including text generation and image generation.
+A platform for accessing AI text generation services using OpenAI's powerful language models.
 
 ## Features
 
 * **Text Generation:** Generate human-like text using OpenAI's API.
-* **Image Generation:** Create images using ComfyUI's Stable Diffusion models.
-* **Workflow Management:** Load and manage different ComfyUI workflows.
 * **Easy to use**: Simple web interface
 * **Free**: Use it for free
 
@@ -49,17 +47,7 @@ A platform for accessing various AI services, including text generation and imag
 ## Usage
 
 1. Open your web browser and navigate to `http://localhost:5000`
-2. Use the web interface to:
-   - Generate text using OpenAI's API
-   - Create images using ComfyUI's Stable Diffusion models
-   - Manage and execute different workflows
-
-## ComfyUI Integration
-
-To use the image generation features:
-1. Make sure you have ComfyUI installed and running
-2. The platform will automatically connect to your local ComfyUI instance
-3. You can load and execute different workflows through the web interface
+2. Use the web interface to generate text using OpenAI's API
 
 ## Contributing
 
