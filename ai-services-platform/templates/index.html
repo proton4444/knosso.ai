@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Services Platform | Access Powerful AI Tools</title>
+    <meta name="description" content="Use advanced AI capabilities for text generation, image creation, and more - all with a simple, intuitive interface.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">AI Services</div>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#" class="btn-small">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <h1>Powerful AI at Your Fingertips</h1>
+                <p>Access state-of-the-art AI capabilities through our simple, intuitive interface</p>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="services-section">
+            <h2>AI Services</h2>
+            <p class="section-subtitle">Choose from our growing collection of AI tools</p>
+            
+            <div class="service-card">
+                <div class="card-header">
+                    <h3>Text Generation</h3>
+                    <span class="badge">Popular</span>
+                </div>
+                <p>Generate human-like text for creative writing, content creation, or brainstorming.</p>
+                
+                <form id="text-generation-form">
+                    <div class="form-group">
+                        <label for="prompt">Your prompt:</label>
+                        <textarea id="prompt" rows="4" placeholder="Enter a detailed description of what you'd like the AI to generate..."></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">
+                        <span class="btn-text">Generate</span>
+                        <span class="spinner hidden"></span>
+                    </button>
+                </form>
+                
+                <div id="result" class="result-container hidden">
+                    <h4>Generated Result:</h4>
+                    <div id="generated-text" class="result-text"></div>
+                    <div class="action-buttons">
+                        <button id="copy-btn" class="btn secondary">Copy Text</button>
+                        <button id="new-btn" class="btn outline">New Generation</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header">
+                    <h3>Image Generation</h3>
+                    <span class="badge">New</span>
+                </div>
+                <p>Generate stunning images using ComfyUI's powerful Stable Diffusion models.</p>
+                
+                <div class="workflow-selection">
+                    <label for="workflow-select">Select a workflow:</label>
+                    <select id="workflow-select" class="workflow-dropdown">
+                        <option value="">Loading workflows...</option>
+                    </select>
+                </div>
+                
+                <form id="image-generation-form" class="hidden">
+                    <div id="workflow-params">
+                        <!-- Dynamic parameters will be inserted here -->
+                    </div>
+                    <button type="submit" class="btn primary">
+                        <span class="btn-text">Generate Image</span>
+                        <span class="spinner hidden"></span>
+                    </button>
+                </form>
+                
+                <div id="image-result" class="result-container hidden">
+                    <h4>Generated Image:</h4>
+                    <div class="image-container">
+                        <img id="generated-image" src="" alt="Generated image will appear here">
+                    </div>
+                    <div class="action-buttons">
+                        <button id="download-btn" class="btn secondary">Download Image</button>
+                        <button id="new-image-btn" class="btn outline">New Generation</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="features-section">
+            <h2>Why Choose Our Platform?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Fast & Reliable</h3>
+                    <p>Get AI-powered results in seconds with our optimized platform.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure</h3>
+                    <p>Your data and prompts remain private and protected.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <h3>Free to Use</h3>
+                    <p>Access powerful AI capabilities without breaking the bank.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔌</div>
+                    <h3>API Access</h3>
+                    <p>Integrate our AI services directly into your applications.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AI Services</div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit" class="btn primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Services Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
